@@ -1,7 +1,7 @@
 # Použijeme oficiální Python obraz z Docker Hub
 FROM python:3.8-slim
 
-# Nastavíme pracovní adresář ve vnitřku kontejneru
+# Nastavíme pracovní adresář ve vnitřku kontejnerů
 WORKDIR /app
 
 # Zkopírujeme soubory requirements.txt do kontejneru
