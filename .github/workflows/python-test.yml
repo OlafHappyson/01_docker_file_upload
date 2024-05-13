@@ -13,6 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Build Docker image
+      run: docker build -t my-python-app .
+    - name: Run Docker container
+      run: docker run --name my-app my-python-app
+    - name: Run tests
+      run: docker exec my-app pytest
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
